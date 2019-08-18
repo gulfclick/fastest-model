@@ -1,0 +1,17 @@
+{
+    "name": "fastest/models",
+    "type": "library",
+    "description": "models for fastest application",
+    "autoload": {
+        "psr-4": {
+            "fastest\\models\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Navid Hero",
+            "email": "navid.hero@gulfclick.net@gmail.com",
+            "role": "Developer"
+        }
+    ]
+}
