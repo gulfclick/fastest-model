@@ -1,10 +1,7 @@
 <?php
 
 namespace FastestModels;
-
-use Illuminate\Database\Eloquent\Model;
-
-class CategoryFood extends Model
+class CategoryFood extends BaseModel
 {
     protected $fillable = [
         'category_id', 'food_id', 'is_active'

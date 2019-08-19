@@ -1,10 +1,7 @@
 <?php
 
 namespace FastestModels;
-
-use Illuminate\Database\Eloquent\Model;
-
-class RestaurantOpenTime extends Model
+class RestaurantOpenTime extends BaseModel
 {
     protected $fillable = [
         'restaurant_id',

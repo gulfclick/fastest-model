@@ -1,10 +1,7 @@
 <?php
 
 namespace FastestModels;
-
-use Illuminate\Database\Eloquent\Model;
-
-class AddonItem extends Model
+class AddonItem extends BaseModel
 {
     protected $fillable = [
         'addon_id', 'name_en', 'name_ar', 'icon', 'price', 'is_active'

@@ -1,10 +1,7 @@
 <?php
 
 namespace FastestModels;
-
-use Illuminate\Database\Eloquent\Model;
-
-class FoodAddon extends Model
+class FoodAddon extends BaseModel
 {
     protected $fillable = [
         'food_id',

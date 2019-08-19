@@ -1,10 +1,7 @@
 <?php
 
 namespace FastestModels;
-
-use Illuminate\Database\Eloquent\Model;
-
-class Food extends Model
+class Food extends BaseModel
 {
     protected $fillable = [
         'restaurant_id', 'name_en', 'name_ar', 'description_en', 'description_ar',

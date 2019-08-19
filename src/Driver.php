@@ -1,10 +1,7 @@
 <?php
 
 namespace FastestModels;
-
-use Illuminate\Database\Eloquent\Model;
-
-class Driver extends Model
+class Driver extends BaseModel
 {
     protected $fillable = [
         'user_id',

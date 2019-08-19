@@ -2,9 +2,7 @@
 
 namespace FastestModels;
 
-use Illuminate\Database\Eloquent\Model;
-
-class RestaurantCategory extends Model
+class RestaurantCategory extends BaseModel
 {
     protected $fillable = [
         'restaurant_id', 'category_id', 'is_active'

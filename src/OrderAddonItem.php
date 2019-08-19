@@ -1,10 +1,7 @@
 <?php
 
 namespace FastestModels;
-
-use Illuminate\Database\Eloquent\Model;
-
-class OrderAddonItem extends Model
+class OrderAddonItem extends BaseModel
 {
     protected $fillable = [
         'order_item_id', 'addon_item_id'

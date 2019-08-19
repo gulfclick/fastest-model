@@ -1,10 +1,7 @@
 <?php
 
 namespace FastestModels;
-
-use Illuminate\Database\Eloquent\Model;
-
-class Order extends Model
+class Order extends BaseModel
 {
     protected $fillable = [
         'unique_number',

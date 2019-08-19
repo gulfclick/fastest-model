@@ -1,10 +1,7 @@
 <?php
 
 namespace FastestModels;
-
-use Illuminate\Database\Eloquent\Model;
-
-class AddressBook extends Model
+class AddressBook extends BaseModel
 {
     protected $fillable = [
         'user_id',

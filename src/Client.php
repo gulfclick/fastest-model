@@ -1,10 +1,7 @@
 <?php
 
 namespace FastestModels;
-
-use Illuminate\Database\Eloquent\Model;
-
-class Client extends Model
+class Client extends BaseModel
 {
     protected $fillable = [
         'user_id', 'credit', 'is_active'

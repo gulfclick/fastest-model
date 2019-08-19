@@ -1,10 +1,7 @@
 <?php
 
 namespace FastestModels;
-
-use Illuminate\Database\Eloquent\Model;
-
-class RestaurantPaymentMethod extends Model
+class RestaurantPaymentMethod extends BaseModel
 {
     protected $fillable = [
         'restaurant_id', 'payment_method_id', 'is_active'
