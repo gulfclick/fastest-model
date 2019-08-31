@@ -21,4 +21,14 @@ class Category extends BaseModel
     {
         return $this->belongsTo(Category::class);
     }
+
+    public function foods()
+    {
+        return $this->morphedByMany(Food::class, 'categoriable');
+    }
+
+    public function restaurants()
+    {
+        return $this->morphedByMany(Restaurant::class, 'categoriable');
+    }
 }

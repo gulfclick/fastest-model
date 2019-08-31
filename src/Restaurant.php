@@ -19,4 +19,9 @@ class Restaurant extends BaseModel
     {
         return $this->belongsTo(User::class);
     }
+
+    public function categories()
+    {
+        return $this->morphToMany(Category::class, 'categoriable');
+    }
 }
