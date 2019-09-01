@@ -29,4 +29,9 @@ class AddressBook extends BaseModel
     {
         return $this->belongsTo(Area::class);
     }
+	
+	public function getFullAddress()
+	{
+		return "{$this->area->name} {$this->block} {$this->street} {$this->avenue} {$this->building_number} {$this->floor} {$this->jadda}";
+	}
 }

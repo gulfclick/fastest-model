@@ -1,8 +1,13 @@
 <?php
 
 namespace FastestModels;
+
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 class Order extends BaseModel
 {
+	use SoftDeletes;
+	
     protected $fillable = [
         'unique_number',
         'client_id',

@@ -1,8 +1,13 @@
 <?php
 
 namespace FastestModels;
+
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 class Restaurant extends BaseModel
 {
+	use SoftDeletes;
+	
     protected $fillable = [
         'user_id',
         'caption_en',
@@ -18,5 +23,10 @@ class Restaurant extends BaseModel
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function categories()
+    {
+        return $this->morphToMany(Category::class, 'categoriable');
     }
 }

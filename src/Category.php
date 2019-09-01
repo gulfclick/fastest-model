@@ -1,8 +1,13 @@
 <?php
 
 namespace FastestModels;
+
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 class Category extends BaseModel
 {
+	use SoftDeletes;
+	
     protected $fillable = [
         'parent_category_id',
         'name_en',
@@ -12,13 +17,21 @@ class Category extends BaseModel
         'sort_order',
         'description_en',
         'description_ar',
-        'catable_id',
-        'catable_type',
         'is_active',
     ];
 
     public function parent()
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function foods()
+    {
+        return $this->morphedByMany(Food::class, 'categoriable');
+    }
+
+    public function restaurants()
+    {
+        return $this->morphedByMany(Restaurant::class, 'categoriable');
     }
 }
