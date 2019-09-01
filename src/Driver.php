@@ -1,8 +1,13 @@
 <?php
 
 namespace FastestModels;
+
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 class Driver extends BaseModel
 {
+	use SoftDeletes;
+	
     protected $fillable = [
         'user_id',
         'transport_mode_en',

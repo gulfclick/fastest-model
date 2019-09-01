@@ -1,8 +1,13 @@
 <?php
 
 namespace FastestModels;
+
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 class Category extends BaseModel
 {
+	use SoftDeletes;
+	
     protected $fillable = [
         'parent_category_id',
         'name_en',

@@ -1,8 +1,13 @@
 <?php
 
 namespace FastestModels;
+
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 class Restaurant extends BaseModel
 {
+	use SoftDeletes;
+	
     protected $fillable = [
         'user_id',
         'caption_en',

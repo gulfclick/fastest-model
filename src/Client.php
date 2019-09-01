@@ -1,8 +1,12 @@
 <?php
 
 namespace FastestModels;
+
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 class Client extends BaseModel
 {
+	use SoftDeletes;
     protected $fillable = [
         'user_id', 'credit', 'is_active'
     ];
