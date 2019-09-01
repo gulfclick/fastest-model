@@ -32,6 +32,6 @@ class AddressBook extends BaseModel
 	
 	public function getFullAddress()
 	{
-		return "{$this->area->name} {$this->block} {$this->street} {$this->avenue} {$this->building number} {$this->floor} {$this->jadda}";
+		return "{$this->area->name} {$this->block} {$this->street} {$this->avenue} {$this->building_number} {$this->floor} {$this->jadda}";
 	}
 }
