@@ -16,6 +16,7 @@ class Restaurant extends BaseModel
         'min_delivery_time',
         'max_delivery_time',
         'status', // [ open / close / busy ]
+		'type', // [fast / superfast]
         'credit',
         'is_active'
     ];
