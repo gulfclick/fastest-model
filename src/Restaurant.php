@@ -10,6 +10,8 @@ class Restaurant extends BaseModel
 	
     protected $fillable = [
         'user_id',
+		'logo',
+		'image',
         'caption_en',
         'caption_ar',
         'establish_date',
