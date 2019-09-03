@@ -16,4 +16,11 @@ class RestaurantPaymentMethod extends BaseModel
     {
         return $this->belongsTo(PaymentMethod::class);
     }
+	
+	protected static function boot()
+    {
+        parent::boot();
+
+        static::addGlobalScope(new ActiveScope);
+    }
 }

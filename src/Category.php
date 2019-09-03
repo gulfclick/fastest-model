@@ -34,4 +34,11 @@ class Category extends BaseModel
     {
         return $this->morphedByMany(Restaurant::class, 'categoriable');
     }
+	
+	protected static function boot()
+    {
+        parent::boot();
+
+        static::addGlobalScope(new ActiveScope);
+    }
 }

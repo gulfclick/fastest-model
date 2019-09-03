@@ -19,4 +19,11 @@ class FoodAddon extends BaseModel
     {
         return $this->belongsTo(Addon::class);
     }
+	
+	protected static function boot()
+    {
+        parent::boot();
+
+        static::addGlobalScope(new ActiveScope);
+    }
 }

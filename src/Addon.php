@@ -10,4 +10,11 @@ class Addon extends BaseModel
     {
         return $this->belongsTo(Restaurant::class);
     }
+	
+	protected static function boot()
+    {
+        parent::boot();
+
+        static::addGlobalScope(new ActiveScope);
+    }
 }

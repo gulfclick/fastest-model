@@ -32,4 +32,11 @@ class Restaurant extends BaseModel
     {
         return $this->morphToMany(Category::class, 'categoriable');
     }
+	
+	protected static function boot()
+    {
+        parent::boot();
+
+        static::addGlobalScope(new ActiveScope);
+    }
 }
