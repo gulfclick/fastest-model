@@ -32,6 +32,11 @@ class Restaurant extends BaseModel
     {
         return $this->morphToMany(Category::class, 'categoriable');
     }
+
+    public function supportingAreas()
+    {
+        return $this->hasMany(RestaurantSupportingArea::class, 'restaurant_id');
+    }
 	
 	protected static function boot()
     {
