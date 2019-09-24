@@ -17,6 +17,7 @@ class Category extends BaseModel
         'sort_order',
         'description_en',
         'description_ar',
+		'type',
         'is_active',
     ];
 
