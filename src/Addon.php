@@ -11,6 +11,11 @@ class Addon extends BaseModel
         return $this->belongsTo(Restaurant::class);
     }
 	
+    public function items()
+    {
+        return $this->hasManu(AddonItem::class, 'addon_id', 'id');
+    }
+	
 	protected static function boot()
     {
         parent::boot();
