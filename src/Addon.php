@@ -13,7 +13,7 @@ class Addon extends BaseModel
 	
     public function items()
     {
-        return $this->hasManu(AddonItem::class, 'addon_id', 'id');
+        return $this->hasMany(AddonItem::class, 'addon_id', 'id');
     }
 	
 	protected static function boot()
