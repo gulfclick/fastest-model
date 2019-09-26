@@ -17,6 +17,7 @@ class Category extends BaseModel
         'sort_order',
         'description_en',
         'description_ar',
+		'type',
         'is_active',
     ];
 
@@ -33,5 +34,12 @@ class Category extends BaseModel
     public function restaurants()
     {
         return $this->morphedByMany(Restaurant::class, 'categoriable');
+    }
+	
+	protected static function boot()
+    {
+        parent::boot();
+
+        static::addGlobalScope(new ActiveScope);
     }
 }

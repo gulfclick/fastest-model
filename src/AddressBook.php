@@ -34,4 +34,11 @@ class AddressBook extends BaseModel
 	{
 		return "{$this->area->name} {$this->block} {$this->street} {$this->avenue} {$this->building_number} {$this->floor} {$this->jadda}";
 	}
+	
+	protected static function boot()
+    {
+        parent::boot();
+
+        static::addGlobalScope(new ActiveScope);
+    }
 }
