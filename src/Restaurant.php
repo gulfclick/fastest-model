@@ -8,22 +8,7 @@ class Restaurant extends BaseModel
 {
 	use SoftDeletes;
 	
-    protected $fillable = [
-        'user_id',
-		'title_en',
-		'title_ar',
-		'logo',
-		'image',
-        'caption_en',
-        'caption_ar',
-        'establish_date',
-        'min_delivery_time',
-        'max_delivery_time',
-        'status', // [ open / close / busy ]
-		'type', // [fast / superfast]
-        'credit',
-        'is_active'
-    ];
+    protected $guarded=['id'];
 
     public function user()
     {
