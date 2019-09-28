@@ -8,6 +8,7 @@ class ApiRequestBody extends BaseModel
 {
     protected $fillable = [
         'api_request_id',
+        'path',
         'header',
         'body'
     ];
