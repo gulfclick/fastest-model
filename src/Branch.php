@@ -10,4 +10,3 @@ class Branch extends BaseModel
     protected $table="branches";
 
 }
-
