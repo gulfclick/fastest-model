@@ -8,34 +8,7 @@ class Order extends BaseModel
 {
 	use SoftDeletes;
 	
-    protected $fillable = [
-        'unique_number',
-        'client_id',
-        'restaurant_id',
-        'driver_id',
-
-        'pickup_name',
-        'pickup_phone',
-        'pickup_address_id',
-        'pickup_address',
-        'pickup_latitude',
-        'pickup_longitude',
-
-        'destination_name',
-        'destination_phone',
-        'destination_address_id',
-        'destination_address',
-        'destination_latitude',
-        'destination_longitude',
-
-        'delivery_type',
-        'expected_delivery_datetime',
-
-        'total_price',
-        'total_discount',
-        'payment_method',
-        'status' // [ init / completed / canceled / rollback ]
-    ];
+    protected $gaurded = ['id'];
 
     public function client()
     {
