@@ -20,6 +20,14 @@ class Driver extends BaseModel
         'is_active'
     ];
 
+    protected $appends = ['profile_photo'];
+
+    public function getProfilePhotoAttribute()
+    {
+		$userDetail = UserDetail::where('user_id', '=', $this->user_id)->where('user_type', 'LIKE', 'driver')->first();
+        return $userDetail ? $userDetail->profile_photo : '';
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class);
