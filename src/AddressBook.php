@@ -5,6 +5,7 @@ class AddressBook extends BaseModel
 {
     protected $fillable = [
         'user_id',
+		'title',
         'area_id',
         'block',
         'street',
