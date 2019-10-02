@@ -9,6 +9,13 @@ class Order extends BaseModel
 	use SoftDeletes;
 	
     protected $gaurded = ['id'];
+	
+	protected $appends = ['day_of_week'];
+
+    public function getDayOfWeekAttribute()
+    {
+		return date('w', strtotime($this->created_at));
+    }
 
     public function client()
     {
