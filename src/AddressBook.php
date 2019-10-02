@@ -1,6 +1,7 @@
 <?php
 
 namespace FastestModels;
+use App\User;
 class AddressBook extends BaseModel
 {
     protected $fillable = [
@@ -17,6 +18,7 @@ class AddressBook extends BaseModel
         'latitude',
         'longitude',
         'phone_number',
+		'extra_info',
         'is_default',
         'is_active'
     ];
