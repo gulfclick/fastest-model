@@ -25,6 +25,11 @@ class Order extends BaseModel
         return $this->belongsTo(Driver::class);
     }
 
+    public function items()
+    {
+        return $this->hasMany(OrderItem::class, 'order_id', 'id');
+    }
+
     public function pickup()
     {
         return $this->belongsTo(AddressBook::class);

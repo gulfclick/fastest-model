@@ -16,4 +16,9 @@ class OrderItem extends BaseModel
     {
         return $this->belongsTo(Food::class);
     }
+
+    public function addons()
+    {
+        return $this->hasMany(OrderAddonItem::class, 'order_item_id', 'id');
+    }
 }
