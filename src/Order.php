@@ -32,9 +32,9 @@ class Order extends BaseModel
         return $this->belongsTo(Driver::class);
     }
 
-    public function items()
+    public function histories()
     {
-        return $this->hasMany(OrderItem::class, 'order_id', 'id');
+        return $this->hasMany(OrderHistory::class, 'order_id', 'id');
     }
 
     public function pickup()
