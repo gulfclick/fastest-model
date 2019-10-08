@@ -7,7 +7,7 @@ class City extends BaseModel
 	
 	public function areas()
 	{
-		return $this->hasMany(Area:class);
+		return $this->hasMany(Area::class);
 	}
 	
 	protected static function boot()
