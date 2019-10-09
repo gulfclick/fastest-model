@@ -3,11 +3,11 @@
 namespace FastestModels;
 class City extends BaseModel
 {
-    protected $gaurded = ['id'];
+    protected $guarded = ['id'];
 	
 	public function areas()
 	{
-		return $this->hasMany(Area::class);
+		return $this->hasMany(Area::class, 'city_id', 'id');
 	}
 	
 	protected static function boot()
