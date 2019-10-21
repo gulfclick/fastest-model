@@ -3,11 +3,14 @@
 namespace FastestModels;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\User;
 
 class Restaurant extends BaseModel
 {
 	use SoftDeletes;
+
 	protected $guarded=['id'];
+
     public function user()
     {
         return $this->belongsTo(User::class);

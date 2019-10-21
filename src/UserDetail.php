@@ -3,6 +3,7 @@
 namespace FastestModels;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\User;
 
 class UserDetail extends BaseModel
 {
