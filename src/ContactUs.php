@@ -1,7 +1,7 @@
 <?php
 
 namespace FastestModels;
-class Notification extends BaseModel
+class ContactUs extends BaseModel
 {
     protected $fillable = [
 		'contact_name',
