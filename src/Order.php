@@ -9,6 +9,13 @@ class Order extends BaseModel
 	use SoftDeletes;
 	
     protected $gaurded = ['id'];
+	
+	protected $appends = ['day_of_week'];
+
+    public function getDayOfWeekAttribute()
+    {
+		return date('w', strtotime($this->created_at));
+    }
 
     public function client()
     {
@@ -24,10 +31,15 @@ class Order extends BaseModel
     {
         return $this->belongsTo(Driver::class);
     }
-
-    public function items()
+	
+	public function items()
     {
         return $this->hasMany(OrderItem::class, 'order_id', 'id');
+    }
+
+    public function histories()
+    {
+        return $this->hasMany(OrderHistory::class, 'order_id', 'id');
     }
 
     public function pickup()

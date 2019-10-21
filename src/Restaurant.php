@@ -15,10 +15,20 @@ class Restaurant extends BaseModel
     {
         return $this->belongsTo(User::class);
     }
+	
+	public function tempCategories()
+    {
+        return $this->belongsToMany(Category::class, 'categoriables','categoriable_id')->where("categoriable_type","Restaurant");
+    }
 
     public function categories()
     {
         return $this->morphToMany(Category::class, 'categoriable');
+    }
+	
+	public function times()
+    {
+        return $this->hasMany(RestaurantActivityHour::class,'restaurant_id');
     }
 
     public function supportingAreas()
