@@ -6,7 +6,9 @@ class OrderHistory extends BaseModel
 {
     protected $fillable = [
         'order_id',
+        'driver_id',
         'status', // [ init , completed, canceled, rollback, preparing, onWay, delivered ]
+        'description',
     ];
 
     public function order()
