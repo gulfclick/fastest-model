@@ -9,6 +9,8 @@ class OrderHistory extends BaseModel
         'driver_id',
         'status', // [ init , completed, canceled, rollback, preparing, onWay, delivered ]
         'description',
+		'driver_latitude',
+		'driver_longitude'
     ];
 
     public function order()
