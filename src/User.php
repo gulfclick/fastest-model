@@ -48,4 +48,10 @@ class User extends Authenticatable
 		return $this->hasMany(UserDetail::class);
 	}
 
+
+    public function test()
+    {
+        //test
+	}
+
 }
