@@ -9,4 +9,19 @@ class Branch extends BaseModel
     protected $guarded=['id'];
     protected $table="branches";
 
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+    public function restaurant()
+    {
+        return $this->belongsTo(Restaurant::class);
+    }
+    public function area()
+    {
+        return $this->belongsTo(Area::class);
+    }
+
+
+
 }
