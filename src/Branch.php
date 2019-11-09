@@ -8,7 +8,6 @@ class Branch extends BaseModel
 {
     protected $guarded=['id'];
     protected $table="branches";
-
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -22,6 +21,5 @@ class Branch extends BaseModel
         return $this->belongsTo(Area::class);
     }
 
-
-
 }
+

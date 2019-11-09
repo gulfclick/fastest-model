@@ -8,8 +8,8 @@ use App\User;
 class Restaurant extends BaseModel
 {
 	use SoftDeletes;
-	
-    protected $guarded=['id'];
+
+	protected $guarded=['id'];
 
     public function user()
     {
