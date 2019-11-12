@@ -41,7 +41,6 @@ class Order extends BaseModel
     {
         return $this->hasMany(OrderHistory::class, 'order_id', 'id');
     }
-
     public function pickup()
     {
         return $this->belongsTo(AddressBook::class);
@@ -50,15 +49,5 @@ class Order extends BaseModel
     {
         return $this->belongsTo(AddressBook::class);
     }
-    public function from()
-    {
-        if(isset($this->items[0]->branch)){
-            return ['lat'=>$this->items[0]->branch->latitude,'long'=>$this->items[0]->branch->longitude];
-        }
-        return ['lat'=>$this->latitude,'long'=>$this->longitude];
-    }
-    public function to()
-    {
-        return ['lat'=>$this->destination_latitude,'long'=>$this->destination_longitude];
-    }
+
 }
