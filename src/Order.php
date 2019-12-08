@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Order extends BaseModel
 {
 	use SoftDeletes;
-	
+	//status  ==> init ,Accepted Restaurant,completed ,canceled , rollback
     protected $gaurded = ['id'];
 	
 	protected $appends = ['day_of_week'];

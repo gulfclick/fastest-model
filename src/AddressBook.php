@@ -4,24 +4,7 @@ namespace FastestModels;
 use App\User;
 class AddressBook extends BaseModel
 {
-    protected $fillable = [
-        'user_id',
-		'title',
-        'area_id',
-        'block',
-        'street',
-        'avenue',
-        'building_number',
-        'place_type',
-        'floor',
-        'jadda',
-        'latitude',
-        'longitude',
-        'phone_number',
-		'extra_info',
-        'is_default',
-        'is_active'
-    ];
+    protected $guarded=['id'];
 
     public function user()
     {
