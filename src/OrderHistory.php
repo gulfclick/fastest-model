@@ -4,14 +4,15 @@ namespace FastestModels;
 
 class OrderHistory extends BaseModel
 {
-    protected $fillable = [
-        'order_id',
-        'driver_id',
-        'status', // [ init ,Accepted By Restaurant, completed, canceled, rollback, preparing, onWay, delivered ]
-        'description',
-		'driver_latitude',
-		'driver_longitude'
-    ];
+//    protected $fillable = [
+//        'order_id',
+//        'driver_id',
+//        'status', // [ init ,Accepted By Restaurant, completed, canceled, rollback, preparing, onWay, delivered ]
+//        'description',
+//		'driver_latitude',
+//		'driver_longitude'
+//    ];
+    protected $gaurded = ['id'];
 
     public function order()
     {

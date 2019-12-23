@@ -32,4 +32,14 @@ class Driver extends BaseModel
     {
         return $this->belongsTo(User::class);
     }
+
+    public function jobHistory()
+    {
+        return $this->hasMany(OrderHistory::class,'driver_id');
+    }
+    public function completedJob()
+    {
+        return $this->hasMany(OrderHistory::class,'driver_id')->where('status','completed');
+    }
+
 }

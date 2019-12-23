@@ -8,6 +8,7 @@ class Order extends BaseModel
 {
 	use SoftDeletes;
 	//status  ==> init ,Accepted Restaurant,completed ,canceled , rollback
+    //payment_method==>  1==>myfatoorah,2==>Cash,3==>Knet
     protected $gaurded = ['id'];
 	
 	protected $appends = ['day_of_week'];
