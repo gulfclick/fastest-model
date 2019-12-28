@@ -15,6 +15,11 @@ class Food extends BaseModel
         return $this->belongsTo(Restaurant::class);
     }
 
+    public function branch()
+    {
+        return $this->belongsTo(Branch::class,'branch_id');
+    }
+
     public function categories()
     {
         return $this->morphToMany(Category::class, 'categoriable');
