@@ -42,4 +42,9 @@ class Restaurant extends BaseModel
 
         static::addGlobalScope(new ActiveScope);
     }
+
+    public function branches()
+    {
+        return $this->hasMany(Branch::class);
+    }
 }

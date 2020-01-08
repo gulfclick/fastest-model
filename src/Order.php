@@ -51,4 +51,29 @@ class Order extends BaseModel
         return $this->belongsTo(AddressBook::class);
     }
 
+    public function paymentSuccess()
+    {
+        return $this->hasOne(Payment::class,'order_id')->where('gateway_status',"Succss");
+
+    }
+
+    public function from()
+    {
+        if($this->items->count()>=1)
+            if(isset($this->items[0]->branch)){
+                return ['lat'=>$this->items[0]->branch->latitude,'long'=>$this->items[0]->branch->longitude];
+            }
+
+
+        return ['lat'=>$this->latitude,'long'=>$this->longitude];
+    }
+    public function to()
+    {
+        return ['lat'=>$this->destination_latitude,'long'=>$this->destination_longitude];
+    }
+
+    public function destinationArea()
+    {
+        return $this->belongsTo(Area::class,'destination_area');
+    }
 }

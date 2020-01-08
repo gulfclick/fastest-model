@@ -21,5 +21,10 @@ class Branch extends BaseModel
         return $this->belongsTo(Area::class);
     }
 
+    public function supportingAreas()
+    {
+         return   $this->hasMany(RestaurantSupportingArea::class,'branch_id');
+    }
+
 }
 
